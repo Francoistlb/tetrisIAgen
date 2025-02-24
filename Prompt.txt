@@ -1,0 +1,83 @@
+Hello Bolt,
+I need you to creat a JS app to creat Tetris game 
+I
+
+
+I have a problem, I don't see the piece go to down ?
+I also need to see the piece in advance in the menu bar
+
+
+It's works but i would like to keep the color of the piece which is on the floor.
+I need you to fix the roate as well
+
+
+I have a problem :
+When i do a rotate on a form, when it crashs itself on the floor, the second form is buged so the collision and block form is not count like the origin form
+
+
+Alright, now i have the base of projet, need to suit my projet at this contraints : 
+"Tes étudiants doivent coder un Tetris en HTML,CSSetJavaScript, avec deux joueurs : un humain et une IA.Il faut une grille pour chaque joueur et un tableau des scores. Voici les détails avec des règles amusantes maisgentilles :" 
+For this, i need a second grid played by the IA and this last have to place pieces in the best way to win. 
+I need you to ajust the scoreboard : 50 per line / 
+Bonus : 100 pour 2 lignes, 200 pour 3 lignes, 300 pour un Tetris (4 lignes). 
+
+
+t { useAITetris } from './hooks/useAITetris'; n'est pas utilisé, peux tu te chargé de faire les ajustement necessaire ?@useTetris.ts 
+
+
+import { useEffect } from 'react';
+import { Board } from './components/Board';
+import { NextPiece } from './components/NextPiece';
+import { useTetris } from './hooks/useTetris';
+import { useAITetris } from './hooks/useAITetris';
+import { Gamepad2, Pause, Play, RotateCcw, Robot } from 'lucide-react';
+soucis sur le import { NextPiece } from './components/NextPiece'; il déclare jamais utilisé mais pourtant j'ai bien mon compoenents : 
+
+
+Can you move the annouce for next piece under the score bord pleae ? One for both @useAITetris.ts @useTetris.ts 
+
+
+The IA grid doesn't move after turned on the game @useAITetris.ts 
+
+I would like that play button stop the game for all (inlcuding IA). 
+Also, i would like a stoper when the top's grid is reach, i would like a modale with the final score for both 
+
+
+I want to add a rule for the game "Gift" "Quand un joueur complète 2 lignes d’un coup, l’adversaire reçoit une “pièce facile” (ex. : uncarré ou une ligne droite) pour l’aider un peu." 
+I want you to show this rule in the tool bar please !
+
+
+I want to add a rule for the game "Sweat break" Tous les 200 points, les pièces tombent 20 % plus lentement pendant 10 secondes pour lesdeux joueurs – un petit répit pour souffler !" 
+I want you to show this rule in the tool bar please !
+
+Can you add a speed indicator next to the Contrôle settings ? 
+
+@App.tsx   Speed logic with the second rule doesen't work
+The reduce speed is not working
+And ajuste structure of speed indicator div  with controls indicators div 
+
+
+@App.tsx I want to add a rule for the game "Sweat exchance" "Si un joueur fait un Tetris (4 lignes), il peut échanger une de ses lignes pleines avec une lignevide de l’adversaire – un coup de pouce mutuel !" 
+I want you to show this rule in the tool bar please !
+
+
+@App.tsx  Can you press these 3 rules in 3 block in flex row ?
+
+
+Can you fix the size of background / driv of the announce ? there too much width : 
+
+Not about rules'grid , for nextpiece's grid@App.tsx 
+
+
+@assets i added this soundtrack for my projet, how to include it ?
+
+Can you fix it ? (screen code about song logic )
+
+The button for the song does'nt work@App.tsx @assets 
+@App.tsx  once i clic on the button to stop or play, i cannot clic again to stop or play
+
+I fixed the problem without prompt was 
+return () => {
+      audio.pause();
+      audio.src = audioRef.current.src;   <=
+    };

@@ -1,3 +1,10 @@
+COMMAND
+npm install react react-dom @vitejs/plugin-react
+npm install
+npm run dev
+
+
+PROMPT LIST
 Hello Bolt, I need you to create a JS app to build a Tetris game.
 
 I have a problem, I don’t see the piece moving down.
@@ -68,3 +75,7 @@ The button for the song doesn’t work. (@App.tsx @assets)
 @App.tsx - Once I click on the button to stop or play, I cannot click again to stop or play.
 
 I fixed the problem without a prompt by adding:
+return () => {
+   audio.pause();
+   audio.src = audioRef.current.src;  
+};
